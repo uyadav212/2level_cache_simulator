@@ -189,25 +189,5 @@ int cacheStructure::blockToReplace(addrStructure address) {
 			toReplace = it;
 		}
 	}
-/*
-	//check if block we are replacing needs to be written to main memory before eviction [as cache is write-back]
-	if (this->validBitArray[toReplace][address.getIndexValue()] == true
-		&& this->dirtyBitArray[toReplace][address.getIndexValue()] == true) {
-
-		mainMemory.writeToMM(address.getAddrInBitStr(), this->dataArray[toReplace][address.getIndexValue()]);
-
-		//also in case of check if lower level [L2] is having this block, if so then invalidate it to keep all the images in sync
-		if (this->cacheId == 1) {
-			//need l2 here and need to replace it .....
-
-		}
-	}
-
-	this->dataArray[toReplace][address.getIndexValue()] = data;
-	this->tagArray[toReplace][address.getIndexValue()] = address.getTagValue();
-	this->validBitArray[toReplace][address.getIndexValue()] = true;
-	this->dirtyBitArray[toReplace][address.getIndexValue()] = false;
-	this->lastAccessTime[toReplace][address.getIndexValue()] = getCurrMicroSec();
-*/
 	return toReplace;
 }
