@@ -80,3 +80,6 @@ Implemented a two-level (L1 and L2) cache simulator in C++ with below highlighte
 		-If it is a miss go to L2 and check if it is a hit or a miss.
 		-If it is a hit in L2 perform desired operation as per the access type [read/write].
 		-If it is a miss in L2 then go to main memory and perform desired operation as per the access type [read/write].
+
+Benchmark Traces taken from USIMM: 
+	http://utaharch.blogspot.com/2012/02/usimm.html?m=1
